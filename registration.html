@@ -3,53 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Link-From</title>
+    <title>Link-Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: aqua;
+        }
+        nav {
+            background-color: rgb(255, 255, 255);
+            overflow: hidden;
+            background-color: #ADD8E6;
+            display: flex;
+            justify-content: center;
+        
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+        }
+        /* CSS untuk styling halaman */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        form input, form select {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        form button {
+            background-color: #4c90af;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #4565a0;
+        }
+    </style>
 </head>
 <body>
     <nav>
-        <a href="index.html" style="color: rgb(195, 0, 255);border: 1px solid;margin: 2px;padding: 5px;">Home</a>
-        <a href="information.html"
-        style="color: blue;border:1px solid;margin: 2px;padding: 5px;">Infromation</a>
-        <a href="program studi.html"
-        style="color:purple;border: 1px solid;margin: 2px;padding: 5px;">Program Studi</a>
-        <a href="registration.html"
-        style="color: rgb(219, 127, 255);border: 1px solid;margin: 2px;padding: 5px;">Registration</a>
-        <a href="kelas Kuliah.html"
-        style="color: green;border: 1px solid;margin: 2px;padding: 5px;">Kelas Kuliah</a>
+        <h4 align=""center></h4align>
+            <a class="home" href="index.html" style="color: rgb(195, 0, 255);border: 1px solid;margin: 2px;padding: 5px;">Home</a>
+            <a class="information.html"
+            style="color: blue;border:1px solid;margin: 2px;padding: 5px;">Infromation</a>
+            <a href="program studi.html"
+            style="color:purple;border: 1px solid;margin: 2px;padding: 5px;">Program Studi</a>
+            <a href="registration.html"
+            style="color: rgb(219, 127, 255);border: 1px solid;margin: 2px;padding: 5px;">Registration</a>
+            <a href="kelaskuliah.html"
+            style="color: green;border: 1px solid;margin: 2px;padding: 5px;">Kelas Kuliah</a>
     </nav>
-    <hr>
-    <h2 style="color: whitesmoke;background-color:rgb(127, 255, 148); text-align: center; text-transform: uppercase;">SELAMAT DATANG DI BAGIAN REGISTRASI</h2>
-    <hr />
-    <p> BERIKUT ADALAH LANGKAH - LANGKAH UNTUK MELALUKAN REGISTRASI : <br>
-        1. Persiapkan Dokumen Pendaftaran.<br>
-        2. Isi Formulir Pendaftaran.<br>
-        3. Pembayaraan Biaya Pendaftaran.<br>
-        4. Verifikasi Dokumen.<br>
-        5. Konfirmasi Pendaftaran.<br>
-        6. Registrasi Mahasiswa Baru.<br>
-    </p>
-    <!--link menu-->
-    <!-- <a href="index.html">Home</a>
-    <a href="information.html">Information</a>
-    <a href="program studi.html">Program Studi</a>
-    <a href="registration.html">Registration</a> -->
-    <hr />
-    <p> SETELAH SELESAI MELAKUKAN LANGKAH - LANGKAH DI ATAS AKAN MUNCUL TABEL DIBAWAH DAN KALIAN BISA MENGISINYA <br>
-    </p>
-    <form action="" method="post">
-        <fieldset>
-            <legend>Registrasi</legend>
-            <label for="nama">Nama : </label>
-            <input type="text" name="nama" id="nama" placeholder="nama lengkap" />  <br> <br>
-            <label for="username">Username : </label>
-            <input type="text" name="username" id="username" placeholder="username" /> <br> <br>
-            <label for="email">Email : </label>
-            <input type="text" name="email" id="email" placeholder="@gmail.com"> <br> <br>
-            <label for="password">Password : </label>
-            <input type="text" name="password" id="password" placeholder="minimal 6 karakter"> <br> <br>
-            <input type="sumbit" value="Registrasi">
-    
-        </fieldset>
-    </form> 
+<div class="container">
+    <h2>Input Data Mahasiswa</h2>
+    <form>
+        <label for="nama">Nama Mahasiswa:</label>
+        <input type="text" id="nama" name="nama">
+        <label for="nim">NIM Mahasiswa:</label>
+        <input type="text" id="nim" name="nim">
+        <label for="jenjang">Jenjang:</label>
+        <select id="jenjang" name="jenjang">
+            <option value="S1">S1</option>
+            <option value="D3">D3</option>
+        </select>
+        <label for="progdi">Program Studi:</label>
+        <select id="progdi" name="progdi">
+            <option value="Teknik Informatika">Sistem Informasi</option>
+            <option value="Sistem Informatika">Teknik Informatika</option>
+            <option value="Komputerisasi Akuntansi">Manajemen Informasi</option>
+            <option value="Manajemen Informasi">Komputerisasi Akuntansi</option>
+        </select>
+        <button type="submit">Simpan</button>
+    </form>
+</div>
+
 </body>
 </html>
